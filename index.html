@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student names</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+.highlight {
+  background-color: #ffe066;
+}
+</style>
 
 </head>
 
@@ -13,7 +18,7 @@
     <main class="container" id="app">
 
         <article v-for="s in students">
-            <p>Hola yo soy Galis</p>
+            <p :class="{ highlight: s.length >= 7 }">Hola yo soy {{s}}</p>
         </article>
 
     </main>
